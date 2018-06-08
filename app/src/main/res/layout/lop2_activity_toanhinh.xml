@@ -8,7 +8,7 @@
     tools:ignore="ExtraText">
 
     <TextView
-        android:id="@+id/numbera"
+        android:id="@+id/txtQuestionToanHinh"
         android:layout_width="261dp"
         android:layout_height="167dp"
         android:layout_marginBottom="8dp"
@@ -20,13 +20,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
-        android:id="@+id/btnDapAnA"
+        android:id="@+id/btnToanHinhA"
         android:layout_width="80dp"
         android:layout_height="81dp"
         android:layout_marginBottom="8dp"
@@ -35,19 +35,19 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/lop2_buttondapan"
         android:onClick="onButtonClick"
+        android:paddingTop="40dp"
         android:text="@string/DapAnA"
         android:textSize="25sp"
-        android:paddingTop="40dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDapAnB"
+        app:layout_constraintEnd_toStartOf="@+id/btnToanHinhB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <Button
-        android:id="@+id/btnDapAnB"
+        android:id="@+id/btnToanHinhB"
         android:layout_width="80dp"
         android:layout_height="81dp"
         android:layout_marginBottom="64dp"
@@ -59,13 +59,13 @@
         android:textSize="25sp"
         android:paddingTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDapAnC"
-        app:layout_constraintStart_toEndOf="@+id/btnDapAnA"
+        app:layout_constraintEnd_toStartOf="@+id/btnToanHinhC"
+        app:layout_constraintStart_toEndOf="@+id/btnToanHinhA"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btnDapAnC"
+        android:id="@+id/btnToanHinhC"
         android:layout_width="80dp"
         android:layout_height="81dp"
         android:layout_marginBottom="64dp"
@@ -77,13 +77,13 @@
         android:textSize="25sp"
         android:paddingTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDapAnD"
-        app:layout_constraintStart_toEndOf="@+id/btnDapAnB"
+        app:layout_constraintEnd_toStartOf="@+id/btnToanHinhD"
+        app:layout_constraintStart_toEndOf="@+id/btnToanHinhB"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btnDapAnD"
+        android:id="@+id/btnToanHinhD"
         android:layout_width="80dp"
         android:layout_height="81dp"
         android:layout_marginBottom="64dp"
@@ -97,7 +97,7 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDapAnC"
+        app:layout_constraintStart_toEndOf="@+id/btnToanHinhC"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -117,22 +117,20 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnNext"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/btnNextToanHinh"
+        android:layout_width="168dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/btn_next"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.751"  />
 
     <TextView
         android:id="@+id/pointToanHinh"
