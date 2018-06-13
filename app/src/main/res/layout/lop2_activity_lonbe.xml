@@ -48,6 +48,7 @@
         android:text="@string/Lonbe_numberA"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:gravity="right"
         app:layout_constraintEnd_toStartOf="@+id/SignView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
