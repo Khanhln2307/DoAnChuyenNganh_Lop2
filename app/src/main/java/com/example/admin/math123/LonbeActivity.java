@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.admin.math123.core.CustomDialogResult;
@@ -30,8 +29,6 @@ public class LonbeActivity extends AppCompatActivity {
     Button btngreater;
     Button btnnext;
     TextView countview;
-    ImageView imgViewLeft;
-    ImageView imgViewRight;
     TextView pointView;
     int type= (int) (2*Math.random());
 
@@ -52,8 +49,6 @@ public class LonbeActivity extends AppCompatActivity {
         btnnext = (Button)findViewById(R.id.btnNext);
         countview = (TextView)findViewById(R.id.countLonbe);
         countview.setText(String.valueOf(count));
-        imgViewLeft = (ImageView)findViewById(R.id.imageLonbeLeft);
-        imgViewRight = (ImageView)findViewById(R.id.imageLonbeRight);
         pointView = (TextView)findViewById(R.id.pointLonbe);
         countview.setText(String.valueOf("Câu "+count));
         pointView.setText(String.valueOf(point));
@@ -151,28 +146,22 @@ public class LonbeActivity extends AppCompatActivity {
         btngreater.setVisibility(enable);
         btnnext.setVisibility(visible);
     }
-    public void addani()
-    {
-        Lonbe.setBitmap(this.getApplicationContext());
-        imgViewLeft.setImageBitmap(Lonbe.addBitmapA());
-        imgViewRight.setImageBitmap(Lonbe.addBitmapB());
-    }
+
     public void randomType(int Type)
     {
-        Lonbe = new lonbe();
-        imgViewLeft.setImageResource(0);
-        imgViewRight.setImageResource(0);
         numbera.setText("");
         numberb.setText("");
+        Lonbe.setData();
         result= Lonbe.result();
+        type= Lonbe.Type();
         switch (Type){
             case 0:
                 numbera.setText(Lonbe.getA());
                 numberb.setText(Lonbe.getB());
                 break;
             case 1:
-                addani();
+                numbera.setText(Lonbe.getA1() + " " + Lonbe.getSign1() + " " + Lonbe.getA2());
+                numberb.setText(Lonbe.getB1() + " " + Lonbe.getSign2() + " " + Lonbe.getB2());
         }
-        type= (int) (2*Math.random());
     }
 }

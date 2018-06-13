@@ -164,22 +164,19 @@ public class ResultActivity extends AppCompatActivity {
     public void GetFileName(){
         switch (Layout){
             case 1:
-                Filename = "XepHangTest.txt";
-                break;
-            case 2:
-                Filename = "XepHangTapDem.txt";
+                Filename = "Lop2_XepHangTest.txt";
                 break;
             case 3:
-                Filename = "XepHangLonBe.txt";
+                Filename = "Lop2_XepHangLonBe.txt";
                 break;
             case 4:
-                Filename = "XepHangToanHinh.txt";
+                Filename = "Lop2_XepHangToanHinh.txt";
                 break;
             case 5:
-                Filename = "XepHangTinhNham.txt";
+                Filename = "Lop2_XepHangTinhNham.txt";
                 break;
             case 6:
-                Filename = "XepHangToanDo.txt";
+                Filename = "Lop2_XepHangToanDo.txt";
                 break;
         }
     }

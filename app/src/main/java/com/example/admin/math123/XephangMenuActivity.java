@@ -41,16 +41,6 @@ public class XephangMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*Button btnTapDem = (Button)findViewById(R.id.btnTapDem);
-        btnTapDem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(XephangMenuActivity.this, XephangActivity.class);
-                Layout = 2;
-                intent.putExtra("Layout",String.valueOf(Layout));
-                startActivity(intent);
-            }
-        });*/
         final Button btnLonBe = (Button)findViewById(R.id.btnLonBe);
         btnLonBe.setOnClickListener(new View.OnClickListener() {
             @Override

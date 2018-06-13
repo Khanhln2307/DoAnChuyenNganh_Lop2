@@ -126,7 +126,7 @@ public class TinhnhamActivity extends AppCompatActivity {
             }
         else
             switch (v.getId()){
-                case R.id.btnDapAnB:
+                case R.id.btnDapAnA:
                     if(result == 0)
                         setReultWhenTrue();
                     else
@@ -135,8 +135,27 @@ public class TinhnhamActivity extends AppCompatActivity {
                     activeButton(View.INVISIBLE,View.VISIBLE);
                     result=4;
                     break;
-                case R.id.btnDapAnC:
+                case R.id.btnDapAnB:
                     if(result == 1) {
+                        setReultWhenTrue();
+                    }
+                    else
+                        setResultWhenFalse();
+                    setResultContent();
+                    activeButton(View.INVISIBLE,View.VISIBLE);
+                    result=4;
+                    break;
+                case R.id.btnDapAnC:
+                    if(result == 2)
+                        setReultWhenTrue();
+                    else
+                        setResultWhenFalse();
+                    setResultContent();
+                    activeButton(View.INVISIBLE,View.VISIBLE);
+                    result=4;
+                    break;
+                case R.id.btnDapAnD:
+                    if(result == 3) {
                         setReultWhenTrue();
                     }
                     else
@@ -186,9 +205,6 @@ public class TinhnhamActivity extends AppCompatActivity {
         btnDapAnB.setText("");
         btnDapAnC.setText("");
         btnDapAnD.setText("");
-        /*TinhNham.setC();
-        TinhNham.setA();
-        TinhNham.setB();*/
         TinhNham.setData();
         TinhNham.setSign();
         TinhNham.randomResult();
@@ -200,32 +216,16 @@ public class TinhnhamActivity extends AppCompatActivity {
         switch (Type){
             case 0:
                 numbera.setText(TinhNham.getA() + " " + TinhNham.getSign() + " " + TinhNham.getB() + "\n= ?");
-                visible(Type);
                 break;
             case 1:
                 numbera.setText("? " + TinhNham.getSign() + " " + TinhNham.getB() + "\n= " + TinhNham.getC());
-                visible(Type);
                 break;
             case 2:
                 numbera.setText(TinhNham.getA() + " " + TinhNham.getSign() + " ?" + "\n= " + TinhNham.getC());
-                visible(Type);
                 break;
             case 3:
                 numbera.setText(TinhNham.getA() + " ?" + " " + TinhNham.getB() + "\n= " + TinhNham.getC());
-                visible(Type);
                 break;
-        }
-    }
-
-    public void visible(int a) {
-        if (a == 3) {
-            numbera.setVisibility(View.VISIBLE);
-            btnDapAnA.setVisibility(View.INVISIBLE);
-            btnDapAnD.setVisibility(View.INVISIBLE);
-        } else{
-            numbera.setVisibility(View.VISIBLE);
-            btnDapAnA.setVisibility(View.VISIBLE);
-            btnDapAnD.setVisibility(View.VISIBLE);
         }
     }
 
