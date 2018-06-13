@@ -15,7 +15,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="124dp"
         android:background="@drawable/button_main"
         android:text="@string/btn_test"
         android:textColor="#FFBA5C"
@@ -23,21 +23,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnTapDem"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_main"
-        android:text="@string/btnTapDem"
-        android:textColor="#FFBA5C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTest" />
 
     <Button
         android:id="@+id/btnToanHinh"
@@ -108,6 +93,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTapDem" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTest" />
 
 </android.support.constraint.ConstraintLayout>

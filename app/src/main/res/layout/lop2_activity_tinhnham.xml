@@ -35,16 +35,16 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/lop2_buttondapan"
         android:onClick="onButtonClick"
+        android:paddingTop="40dp"
         android:text="@string/DapAnA"
         android:textSize="25sp"
-        android:paddingTop="40dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDapAnB"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.896" />
 
     <Button
         android:id="@+id/btnDapAnB"
@@ -164,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.021" />
 
-    <ImageView
+<!--    <ImageView
         android:id="@+id/imageTinhNhamLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -188,6 +188,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.208"
-        app:srcCompat="@android:drawable/btn_star" /> />
+        app:srcCompat="@android:drawable/btn_star" /> -->
 
 </android.support.constraint.ConstraintLayout>

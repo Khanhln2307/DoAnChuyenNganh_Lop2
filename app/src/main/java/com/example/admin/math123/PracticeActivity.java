@@ -9,7 +9,7 @@ import android.widget.Button;
 public class PracticeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.practice_activity);
+        setContentView(R.layout.lop2_practice_activity);
         Button btnToando = (Button)findViewById(R.id.btn_Toando);
         btnToando.setOnClickListener(new View.OnClickListener() {
             @Override

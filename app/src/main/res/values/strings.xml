@@ -35,4 +35,9 @@
     <string name="AboutUs">AboutUs</string>
     <string name="XepHang">Xếp Hạng</string>
     <string name="btn_Xephang" >Xếp Hạng</string>
+    <string name="btnTapDem">TẬP ĐẾM</string>
+    <string name="btnLonBe">LỚN BÉ</string>
+    <string name="btnToanHinh">TOÁN HÌNH</string>
+    <string name="btnTinhNham">TÍNH NHẨM</string>
+    <string name="btnToanDo">TOÁN ĐỐ</string>
 </resources>
