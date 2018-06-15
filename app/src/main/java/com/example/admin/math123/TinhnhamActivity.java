@@ -22,7 +22,7 @@ public class TinhnhamActivity extends AppCompatActivity {
     int result = 1;
     int count = 1;
     int point = 0;
-    int Layout = 5;
+    int Layout = 4;
     boolean istest = false;
     TextView numbera;
     TextView countview;
@@ -216,15 +216,19 @@ public class TinhnhamActivity extends AppCompatActivity {
         switch (Type){
             case 0:
                 numbera.setText(TinhNham.getA() + " " + TinhNham.getSign() + " " + TinhNham.getB() + "\n= ?");
+                btnDapAnD.setVisibility(View.VISIBLE);
                 break;
             case 1:
                 numbera.setText("? " + TinhNham.getSign() + " " + TinhNham.getB() + "\n= " + TinhNham.getC());
+                btnDapAnD.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 numbera.setText(TinhNham.getA() + " " + TinhNham.getSign() + " ?" + "\n= " + TinhNham.getC());
+                btnDapAnD.setVisibility(View.VISIBLE);
                 break;
             case 3:
                 numbera.setText(TinhNham.getA() + " ?" + " " + TinhNham.getB() + "\n= " + TinhNham.getC());
+                btnDapAnD.setVisibility(View.INVISIBLE);
                 break;
         }
     }

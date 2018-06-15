@@ -40,10 +40,10 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent intent = this.getIntent();
         point = Integer.parseInt(intent.getStringExtra("point"));
+        Layout = Integer.parseInt(intent.getStringExtra("LayoutBaiTap"));
         textPoint = (TextView) findViewById(R.id.textPointResult);
         textFalse = (TextView) findViewById(R.id.textFalseResult);
         textTrue = (TextView) findViewById(R.id.textTrueResult);
-        Layout = Integer.parseInt(intent.getStringExtra("LayoutBaiTap"));
         int True = point / 10;
         int False = 10 - True;
         textPoint.setText(String.valueOf(point));
@@ -164,19 +164,19 @@ public class ResultActivity extends AppCompatActivity {
     public void GetFileName(){
         switch (Layout){
             case 1:
-                Filename = "Lop2_XepHangTest.txt";
+                Filename = "Lop2XepHangTest.txt";
+                break;
+            case 2:
+                Filename = "Lop2XepHangLonBe.txt";
                 break;
             case 3:
-                Filename = "Lop2_XepHangLonBe.txt";
+                Filename = "Lop2XepHangToanHinh.txt";
                 break;
             case 4:
-                Filename = "Lop2_XepHangToanHinh.txt";
+                Filename = "Lop2XepHangTinhNham.txt";
                 break;
             case 5:
-                Filename = "Lop2_XepHangTinhNham.txt";
-                break;
-            case 6:
-                Filename = "Lop2_XepHangToanDo.txt";
+                Filename = "Lop2XepHangToanDo.txt";
                 break;
         }
     }

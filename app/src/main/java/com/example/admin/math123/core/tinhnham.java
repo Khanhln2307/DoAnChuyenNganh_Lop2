@@ -12,7 +12,7 @@ public class tinhnham {
     String Sign ="";
     Random rd=new Random();
     int x;
-    int y = rd.nextInt((3-0+1)+0);
+    int y = rd.nextInt((2-0+1)+0);
     int TempResult;
     int type = rd.nextInt((3-0+1)+0);
     int result;
@@ -21,8 +21,6 @@ public class tinhnham {
             result = x;
         else if(type == 3 && y == 2)
             result = 2;
-        else if(type == 3 && y == 3)
-            result = 3;
         else
             result = rd.nextInt((3-0+1)+0);
     }
@@ -32,7 +30,7 @@ public class tinhnham {
     }
 
     public void setSign() {
-        if(y == 0)
+        if(y == 0 || y == 1)
             switch (x) {
                 case 0:
                     Sign = "+";
@@ -41,10 +39,8 @@ public class tinhnham {
                     Sign = "-";
                     break;
             }
-        else if(y == 1)
+        else if(y == 2)
             Sign = "x";
-        else
-            Sign = "/";
     }
 
     public void setData(){
@@ -70,15 +66,7 @@ public class tinhnham {
             this.numberb = rd.nextInt((4-2+1)+2);
             this.numberc = this.numbera * this.numberb;
             TempResult = 36;
-        }else{
-            this.numberc = rd.nextInt((9-0+1)+0);
-            this.numberb = rd.nextInt((4-2+1)+2);
-            while (this.numberb == 0)
-                this.numberb = rd.nextInt((4-2+1)+2);
-            this.numbera = this.numberb * this.numberc;
-            TempResult = 36;
         }
-
     }
 
     public String getA() {
@@ -305,7 +293,6 @@ public class tinhnham {
                 A.setText(String.valueOf("+"));
                 B.setText(String.valueOf("-"));
                 C.setText(String.valueOf("x"));
-                D.setText(String.valueOf("/"));
             }
             else if (type == 4){
                 switch (result){

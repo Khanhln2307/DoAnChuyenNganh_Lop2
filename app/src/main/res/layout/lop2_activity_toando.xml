@@ -12,16 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/lop2_backgroundbaitap2"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:paddingTop="285dp"
+        android:paddingLeft="85dp"
+        android:paddingRight="35dp"
+        android:paddingTop="70dp"
         android:text="@string/LogicHoiKQ"
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="invisible"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/Content"
@@ -32,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/LogicText"
-        android:textSize="30sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,155 +157,13 @@
         android:textDirection="firstStrongLtr"
         android:textIsSelectable="false"
         android:textSize="25sp"
+        android:paddingTop="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/countlogic"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.021" />
-
-    <ImageView
-        android:id="@+id/imageLogicTopLeft"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
-
-    <TextView
-        android:id="@+id/SignA"
-        android:layout_width="26dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="308dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/Logic_SignA"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageLogicTopLeft"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
-
-    <ImageView
-        android:id="@+id/imageLogicTopRight"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="136dp"
-        app:layout_constraintStart_toEndOf="@+id/SignA"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/KQA"
-        android:layout_width="104dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="308dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/Logic_KQA"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
-        app:layout_constraintStart_toEndOf="@+id/imageLogicTopRight"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
-
-
-    <ImageView
-        android:id="@+id/imageLogicButtonLeft"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="356dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogicTopLeft"
-        app:layout_constraintVertical_bias="0.329" />
-
-    <TextView
-        android:id="@+id/SignB"
-        android:layout_width="26dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="412dp"
-        android:layout_marginStart="24dp"
-        android:paddingLeft="5dp"
-        android:text="@string/Logic_SignB"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageLogicButtonLeft" />
-
-    <ImageView
-        android:id="@+id/imageLogicButtonRight"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="232dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/SignB"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogicTopRight"
-        app:layout_constraintVertical_bias="0.131"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/KQB"
-        android:layout_width="104dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="308dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/Logic_KQB"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
-        app:layout_constraintStart_toEndOf="@+id/imageLogicButtonRight"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
-
-    <ImageView
-        android:id="@+id/imageKetQua"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="268dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
-
-    <TextView
-        android:id="@+id/KqText"
-        android:layout_width="wrap_content"
-        android:layout_height="33dp"
-        android:layout_marginBottom="308dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/LogicHoiKQ"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toEndOf="@+id/imageKetQua"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
-
 
     <Button
         android:id="@+id/btnNext"

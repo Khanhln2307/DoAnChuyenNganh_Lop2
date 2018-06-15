@@ -20,7 +20,7 @@ public class XephangActivity extends AppCompatActivity {
     private String[] listData;
     private ArrayAdapter adapter;
     TextView XepHangText;
-    int Layout = 3;
+    int Layout = 1;
     String[] temp = new String[10];
     FileInputStream f;
     String Filename;
@@ -55,16 +55,16 @@ public class XephangActivity extends AppCompatActivity {
             case 1:
                 XepHangText.setText("Xếp hạng Kiểm tra");
                 break;
-            case 3:
+            case 2:
                 XepHangText.setText("Xếp hạng Lớn bé");
                 break;
-            case 4:
+            case 3:
                 XepHangText.setText("Xếp hạng Toán hình");
                 break;
-            case 5:
+            case 4:
                 XepHangText.setText("Xếp hạng Tính nhẩm");
                 break;
-            case 6:
+            case 5:
                 XepHangText.setText("Xếp hạng Toán đố");
                 break;
         }
@@ -114,19 +114,19 @@ public class XephangActivity extends AppCompatActivity {
     public void GetFileName(){
         switch (Layout){
             case 1:
-                Filename = "Lop2_XepHangTest.txt";
+                Filename = "Lop2XepHangTest.txt";
+                break;
+            case 2:
+                Filename = "Lop2XepHangLonBe.txt";
                 break;
             case 3:
-                Filename = "Lop2_XepHangLonBe.txt";
+                Filename = "Lop2XepHangToanHinh.txt";
                 break;
             case 4:
-                Filename = "Lop2_XepHangToanHinh.txt";
+                Filename = "Lop2XepHangTinhNham.txt";
                 break;
             case 5:
-                Filename = "Lop2_XepHangTinhNham.txt";
-                break;
-            case 6:
-                Filename = "Lop2_XepHangToanDo.txt";
+                Filename = "Lop2XepHangToanDo.txt";
                 break;
         }
     }

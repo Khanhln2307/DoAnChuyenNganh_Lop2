@@ -25,7 +25,7 @@ public class ToanhinhActivity extends AppCompatActivity {
     int result = -1;
     int count = 1;
     int point = 0;
-    int Layout = 4;
+    int Layout = 3;
     boolean istest = false;
     ImageView imageToanHinh;
     TextView question;

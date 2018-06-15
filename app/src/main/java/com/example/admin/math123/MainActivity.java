@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     String FileName;
     int FileNameNumber;
     File file = new File("");
+    String S = "0 0 0 0 0 0 0 0 0 0";
     public static MediaPlayer music;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        for(FileNameNumber = 1; FileNameNumber < 7; FileNameNumber++)
+        for(FileNameNumber = 1; FileNameNumber < 6; FileNameNumber++)
         {
             GetFileName();
             CreateData();
@@ -102,10 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void CreateData(){
         file = new File(FileName);
-        if(file.exists() == true){
+        if(file.exists() == false){
             try {
                 FileOutputStream f = openFileOutput(FileName, MODE_PRIVATE);
-                String S = "0 0 0 0 0 0 0 0 0 0";
                 f.write(S.getBytes());
                 f.close();
             } catch (IOException e) {
@@ -116,19 +117,19 @@ public class MainActivity extends AppCompatActivity {
     public void GetFileName(){
         switch (FileNameNumber){
             case 1:
-                FileName = "Lop2_XepHangTest.txt";
+                FileName = "Lop2XepHangTest.txt";
+                break;
+            case 2:
+                FileName = "Lop2XepHangLonBe.txt";
                 break;
             case 3:
-                FileName = "Lop2_XepHangLonBe.txt";
+                FileName = "Lop2XepHangToanHinh.txt";
                 break;
             case 4:
-                FileName = "Lop2_XepHangToanHinh.txt";
+                FileName = "Lop2XepHangTinhNham.txt";
                 break;
             case 5:
-                FileName = "Lop2_XepHangTinhNham.txt";
-                break;
-            case 6:
-                FileName = "Lop2_XepHangToanDo.txt";
+                FileName = "Lop2XepHangToanDo.txt";
                 break;
         }
     }

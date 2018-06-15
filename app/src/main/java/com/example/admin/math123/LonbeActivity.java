@@ -19,7 +19,7 @@ public class LonbeActivity extends AppCompatActivity {
     int result = 3;
     int count = 1;
     int point = 0;
-    int Layout = 3;
+    int Layout = 2;
     boolean istest= false;
     TextView signview;
     TextView numbera;

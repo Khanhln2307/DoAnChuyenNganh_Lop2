@@ -26,34 +26,21 @@ public class ToandoActivity extends AppCompatActivity {
     int result = 1;
     int count = 1;
     int point = 0;
-    int Layout = 6;
+    int Layout = 5;
     boolean istest = false;
-    int signb = 0;
-    int SoA,SoB;
     TextView ContentText;
     TextView countview;
     TextView pointView;
-    TextView SignA;
-    TextView SignB;
-    TextView KQA;
-    TextView KQB;
-    TextView KQText;
     TextView CachGiai;
     Button btnDapAnA;
     Button btnDapAnB;
     Button btnDapAnC;
     Button btnDapAnD;
     Button btnnext;
-    ImageView imgViewTopLeft;
-    ImageView imgViewTopRight;
-    ImageView imgViewButtonLeft;
-    ImageView imgViewButtonRight;
-    ImageView imgViewKQ;
     TextToSpeech toSpeech;
 
     Random rd=new Random();
     int type = 2;
-    int HinhAnh = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,17 +58,7 @@ public class ToandoActivity extends AppCompatActivity {
         pointView = (TextView)findViewById(R.id.pointlogic);
         countview = (TextView)findViewById(R.id.countlogic);
         countview.setText(String.valueOf("Câu " + count));
-        SignA = (TextView)findViewById(R.id.SignA);
-        SignB = (TextView)findViewById(R.id.SignB);
-        KQA = (TextView)findViewById(R.id.KQA);
-        KQB = (TextView)findViewById(R.id.KQB);
-        KQText = (TextView)findViewById(R.id.KqText);
         CachGiai = (TextView)findViewById(R.id.CachGiai);
-        imgViewTopLeft = (ImageView)findViewById(R.id.imageLogicTopLeft);
-        imgViewTopRight = (ImageView)findViewById(R.id.imageLogicTopRight);
-        imgViewButtonLeft = (ImageView)findViewById(R.id.imageLogicButtonLeft);
-        imgViewButtonRight = (ImageView)findViewById(R.id.imageLogicButtonRight);
-        imgViewKQ = (ImageView)findViewById(R.id.imageKetQua);
         pointView.setText(String.valueOf(point));
         randomType(type);
         ContentText.setOnClickListener(new View.OnClickListener() {
@@ -154,7 +131,6 @@ public class ToandoActivity extends AppCompatActivity {
                     }
                     else
                         setResultWhenFalse();
-                    setResultContent();
                     activeButton(View.INVISIBLE,View.VISIBLE);
 
                     result=4;
@@ -165,7 +141,6 @@ public class ToandoActivity extends AppCompatActivity {
                     }
                     else
                         setResultWhenFalse();
-                    setResultContent();
                     activeButton(View.INVISIBLE,View.VISIBLE);
                     result=4;
                     break;
@@ -175,7 +150,6 @@ public class ToandoActivity extends AppCompatActivity {
                     }
                     else
                         setResultWhenFalse();
-                    setResultContent();
                     activeButton(View.INVISIBLE,View.VISIBLE);
                     result=4;
                     break;
@@ -185,7 +159,6 @@ public class ToandoActivity extends AppCompatActivity {
                     }
                     else
                         setResultWhenFalse();
-                    setResultContent();
                     activeButton(View.INVISIBLE,View.VISIBLE);
                     result=4;
                     break;
@@ -222,27 +195,8 @@ public class ToandoActivity extends AppCompatActivity {
         btnDapAnC.setVisibility(enable);
         btnDapAnD.setVisibility(enable);
         btnnext.setVisibility(visible);
-        if(HinhAnh != 1) {
-            CachGiai.setVisibility(visible);
-            ContentText.setVisibility(pointView.INVISIBLE);
-        }
-
-    }
-
-    public void addani()
-    {
-        if(SoA < SoB && signb == 0) {
-            imgViewTopLeft.setBackgroundResource(R.drawable.ani_3);
-            imgViewTopRight.setBackgroundResource(R.drawable.ani_4);
-            imgViewButtonLeft.setBackgroundResource(R.drawable.ani_4);
-            imgViewButtonRight.setBackgroundResource(R.drawable.ani_3);
-        }
-        else{
-            imgViewTopLeft.setBackgroundResource(R.drawable.ani_3);
-            imgViewTopRight.setBackgroundResource(R.drawable.ani_4);
-            imgViewButtonLeft.setBackgroundResource(R.drawable.ani_3);
-            imgViewButtonRight.setBackgroundResource(R.drawable.ani_4);
-        }
+        CachGiai.setVisibility(visible);
+        ContentText.setVisibility(View.INVISIBLE);
     }
 
     public void randomType(int Type)
@@ -253,108 +207,17 @@ public class ToandoActivity extends AppCompatActivity {
         btnDapAnB.setText("");
         btnDapAnC.setText("");
         btnDapAnD.setText("");
-        ToanDo.setA();
-        ToanDo.setB();
-        ToanDo.setC();
-        ToanDo.setD();
+        ToanDo.setData();
         ToanDo.setMauCau();
         result= ToanDo.getResult();
         Type= ToanDo.getType();
         type = Type;
-        signb = ToanDo.getSignB();
-        SoA = ToanDo.geta();
-        SoB = ToanDo.getb();
-        if(type != 0)
-        {
-            HinhAnh = rd.nextInt((1-0+1)+0);
-        }
 
         ContentText.setText(ToanDo.getContent());
+        ContentText.setVisibility(View.VISIBLE);
 
-        KQA.setText(ToanDo.getC());
-        KQB.setText(ToanDo.getD());
-        SignA.setText(ToanDo.getASign());
-        SignB.setText(ToanDo.getBSign());
         CachGiai.setText(ToanDo.getCachGiai());
 
         ToanDo.setResultToButton(btnDapAnA,btnDapAnB,btnDapAnC,btnDapAnD);
-        switch (type){
-            case 0:
-                visible(type);
-                break;
-            case 1:
-                if(HinhAnh == 1){
-                    addani();
-                    visible(1);
-                    KQText.setText("= ?");
-                    break;
-                }
-                else{
-                    visible(0);
-                    break;
-                }
-            case 2:
-                if(HinhAnh == 1){
-                    addani();
-                    visible(2);
-                    KQText.setText("= ?");
-                    break;
-                }
-                else{
-                    visible(0);
-                    break;
-                }
-        }
-    }
-
-    public void visible(int a) {
-        if (a == 0) {
-            ContentText.setVisibility(View.VISIBLE);
-            imgViewTopLeft.setVisibility(View.INVISIBLE);
-            imgViewTopRight.setVisibility(View.INVISIBLE);
-            imgViewButtonLeft.setVisibility(View.INVISIBLE);
-            imgViewButtonRight.setVisibility(View.INVISIBLE);
-            SignA.setVisibility(View.INVISIBLE);
-            SignB.setVisibility(View.INVISIBLE);
-            KQA.setVisibility(View.INVISIBLE);
-            KQB.setVisibility(View.INVISIBLE);
-            imgViewKQ.setVisibility(View.INVISIBLE);
-            KQText.setVisibility(View.INVISIBLE);
-        } else if (a == 1){
-            ContentText.setVisibility(View.INVISIBLE);
-            imgViewTopLeft.setVisibility(View.VISIBLE);
-            imgViewTopRight.setVisibility(View.VISIBLE);
-            imgViewButtonLeft.setVisibility(View.VISIBLE);
-            imgViewButtonRight.setVisibility(View.VISIBLE);
-            SignA.setVisibility(View.VISIBLE);
-            SignB.setVisibility(View.VISIBLE);
-            KQA.setVisibility(View.VISIBLE);
-            KQB.setVisibility(View.VISIBLE);
-            imgViewKQ.setVisibility(View.VISIBLE);
-            KQText.setVisibility(View.VISIBLE);
-            imgViewKQ.setBackgroundResource(R.drawable.ani_3);
-        } else{
-            ContentText.setVisibility(View.INVISIBLE);
-            imgViewTopLeft.setVisibility(View.VISIBLE);
-            imgViewTopRight.setVisibility(View.VISIBLE);
-            imgViewButtonLeft.setVisibility(View.VISIBLE);
-            imgViewButtonRight.setVisibility(View.VISIBLE);
-            SignA.setVisibility(View.VISIBLE);
-            SignB.setVisibility(View.VISIBLE);
-            KQA.setVisibility(View.VISIBLE);
-            KQB.setVisibility(View.VISIBLE);
-            imgViewKQ.setVisibility(View.VISIBLE);
-            KQText.setVisibility(View.VISIBLE);
-            imgViewKQ.setBackgroundResource(R.drawable.ani_4);
-        }
-    }
-
-    public void setResultContent(){
-        if(HinhAnh == 1 && type == 1){
-            KQText.setText("= " + ToanDo.getA());
-        }
-        if(HinhAnh == 1 && type == 2) {
-            KQText.setText("= " + ToanDo.getB());
-        }
     }
 }

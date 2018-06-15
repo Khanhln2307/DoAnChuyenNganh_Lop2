@@ -15,7 +15,12 @@ public class cau9 {
     String Answer;
     public void setQuestion() {
         Random mRand = new Random();
-        int x = mRand.nextInt(4);
+        int x = mRand.nextInt(5);
+        if(x == 4) {
+            while (numberc > numberb || (4*numberc) < (2*numberb))
+                numberc = (int) (11 * Math.random());
+            numbera = numberb;
+        }
         switch (x) {
             case 0:
                 question = "Hà nghĩ ra một số, lấy số đó trừ " + String.valueOf(numberb) + " cộng " + String.valueOf(numberc) + " bằng " + String.valueOf(numberd) + " . Hỏi số Hà nghĩ là bao nhiêu?";
@@ -33,6 +38,16 @@ public class cau9 {
                 question = "Mẹ Dung bỏ " + String.valueOf(numberb) + " quả táo hư, sau đó mua thêm " + String.valueOf(numberc) + " quả táo thì số quả táo trong giỏ là " + String.valueOf(numberd) + " . Mẹ dung ban đầu có bao nhiêu quả táo?";
                 Answer = "Số táo là: \n\t" + String.valueOf(numberd)+" - " + String.valueOf(numberc)+" + "+String.valueOf(numberb) +" = "+String.valueOf(numbera);
                 break;
+            case 4:
+                question = "1 nông trại có gà và bò, tổng chân bò hơn chân gà là " + String.valueOf(numberc*4 - numberb*2)
+                + " và số gà nhiều hơn số bò là " + String.valueOf(numberb - numberc) +"\n"
+                + "Hỏi nông trại có bao nhiêu con gà?";
+                Answer = "Vì số gà nhiều hơn số bò là " + String.valueOf(numberb - numberc)
+                        + "\nVà gà có 2 chân và bò có 4 chân nên ta có: 4x(Số bò) - 2x(Số gà) = " + String.valueOf(numberc*4 - numberb*2)
+                        + "\nNên 4x(" + String.valueOf(numberb - numberc) + " + Số gà) - 2x(Số gà) = " + String.valueOf(numberc*4 - numberb*2)
+                        + "\n" + String.valueOf(4*(numberb - numberc)) + " + 4x(Số gà) + 2x(Số gà) = " + String.valueOf(numberc*4 - numberb*2)
+                        + "\n6x(Số gà) = " + String.valueOf(6*numberb)
+                        + "\nSố gà = " + String.valueOf(numberb);
         }
     }
     public String getAnswer()
