@@ -11,6 +11,8 @@ public class lonbe {
     int S = rd.nextInt((3-0+1)+0);
 
     public void setData(){
+        x = rd.nextInt((1-0+1)+0);
+        S = rd.nextInt((3-0+1)+0);
         if(x == 0){
             a = rd.nextInt((1000-0+1)+0);
             b = rd.nextInt((1000-0+1)+0);
