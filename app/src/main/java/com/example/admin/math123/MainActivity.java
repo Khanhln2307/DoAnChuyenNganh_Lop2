@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -96,14 +97,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        File path = this.getFilesDir();
         for(FileNameNumber = 1; FileNameNumber < 6; FileNameNumber++)
         {
-            FileName = GetFileName();
-            file = new File(FileName);
-            if(file.exists() == false){
+            FileName = GetFileName(FileNameNumber);
+            File file = new File(path, FileName);
+//            file = new File(FileName);
+            if(!file.exists()){
                 CreateData();
             }
         }
+
+//        File path = this.getFilesDir();
+//        File file = new File(path, "Lop2XepHangLonBe.txt");
+//        if (file.exists()){
+//            Log.d("File--", "Debug");
+//        }
+
     }
 
     public void CreateData(){
@@ -115,8 +125,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public String GetFileName(){
-        switch (FileNameNumber){
+    public String GetFileName(int n){
+        switch (n){
             case 1:
                 FileName = "Lop2XepHangTest.txt";
                 break;
