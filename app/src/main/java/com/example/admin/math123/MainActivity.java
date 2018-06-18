@@ -102,18 +102,10 @@ public class MainActivity extends AppCompatActivity {
         {
             FileName = GetFileName(FileNameNumber);
             File file = new File(path, FileName);
-//            file = new File(FileName);
             if(!file.exists()){
                 CreateData();
             }
         }
-
-//        File path = this.getFilesDir();
-//        File file = new File(path, "Lop2XepHangLonBe.txt");
-//        if (file.exists()){
-//            Log.d("File--", "Debug");
-//        }
-
     }
 
     public void CreateData(){
