@@ -48,6 +48,7 @@ public class ToandoActivity extends AppCompatActivity {
         Intent intenttest = getIntent();
         count = intenttest.getIntExtra("count",1);
         point = intenttest.getIntExtra("point",0);
+        Layout = intenttest.getIntExtra("LayoutBaiTap",5);
         istest=intenttest.getBooleanExtra("istest",false);
         ContentText = (TextView)findViewById(R.id.Content);
         btnDapAnA = (Button)findViewById(R.id.btnDapAnA);

@@ -7,7 +7,7 @@ public class lonbe {
     int b, b1, b2;
     Random rd=new Random();
     String Sign1, Sign2;
-    int x = (int) (2*Math.random());
+    int x = rd.nextInt((1-0+1)+0);
     int S = rd.nextInt((3-0+1)+0);
 
     public void setData(){

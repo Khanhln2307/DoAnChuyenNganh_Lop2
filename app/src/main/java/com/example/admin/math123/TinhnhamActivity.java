@@ -41,6 +41,7 @@ public class TinhnhamActivity extends AppCompatActivity {
         Intent intenttest = getIntent();
         count = intenttest.getIntExtra("count",1);
         point = intenttest.getIntExtra("point",0);
+        Layout = intenttest.getIntExtra("LayoutBaiTap",4);
         istest=intenttest.getBooleanExtra("istest",false);
         numbera = (TextView)findViewById(R.id.numbera);
         btnDapAnA = (Button)findViewById(R.id.btnDapAnA);

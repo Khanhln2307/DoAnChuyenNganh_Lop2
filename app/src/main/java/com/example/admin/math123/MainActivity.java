@@ -95,26 +95,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         for(FileNameNumber = 1; FileNameNumber < 6; FileNameNumber++)
         {
-            GetFileName();
-            CreateData();
-        }
-    }
-
-    public void CreateData(){
-        file = new File(FileName);
-        if(file.exists() == false){
-            try {
-                FileOutputStream f = openFileOutput(FileName, MODE_PRIVATE);
-                f.write(S.getBytes());
-                f.close();
-            } catch (IOException e) {
+            FileName = GetFileName();
+            file = new File(FileName);
+            if(file.exists() == false){
+                CreateData();
             }
         }
     }
 
-    public void GetFileName(){
+    public void CreateData(){
+        try {
+            FileOutputStream f = openFileOutput(FileName, MODE_PRIVATE);
+            f.write(S.getBytes());
+            f.close();
+        } catch (IOException e) {
+        }
+    }
+
+    public String GetFileName(){
         switch (FileNameNumber){
             case 1:
                 FileName = "Lop2XepHangTest.txt";
@@ -132,5 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 FileName = "Lop2XepHangToanDo.txt";
                 break;
         }
+        return FileName;
     }
 }

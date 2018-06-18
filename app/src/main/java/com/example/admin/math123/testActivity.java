@@ -46,6 +46,7 @@ public class testActivity extends AppCompatActivity {
         Intent intenttest = getIntent();
         count = intenttest.getIntExtra("count",1);
         point = intenttest.getIntExtra("point",0);
+        Layout = intenttest.getIntExtra("Layout",1);
         istest=intenttest.getBooleanExtra("istest",false);
         btnA = (Button)findViewById(R.id.btnTestA);
         btnB = (Button)findViewById(R.id.btnTestB);

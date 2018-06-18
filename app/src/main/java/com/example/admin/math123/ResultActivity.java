@@ -18,9 +18,9 @@ public class ResultActivity extends AppCompatActivity {
     TextView textFalse;
     TextView textTrue;
     Button btnNext;
-    String S = "0 0 0 0 0 0 0 0 0 0";
     String[] temp = new String[10];
     String Filename;
+    String b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,16 +57,21 @@ public class ResultActivity extends AppCompatActivity {
                 startActivity(NextIntent);
             }
         });
+        temp[0] = temp[0];
         GetFileName();
         readData();
+        temp[0] = temp[0];
         KiemTraDiem();
+        temp[0] = temp[0];
         saveData();
+        readData();
+        b = temp[0];
     }
 
     public void saveData() {
         try {
             FileOutputStream f = openFileOutput(Filename, MODE_PRIVATE);
-            S = temp[0] + " " + temp[1] + " " + temp[2] + " " + temp[3] + " " + temp[4] + " " + temp[5]
+            String S = temp[0] + " " + temp[1] + " " + temp[2] + " " + temp[3] + " " + temp[4] + " " + temp[5]
                     + " " + temp[6] + " " + temp[7] + " " + temp[8] + " " + temp[9];
             f.write(S.getBytes());
             f.close();

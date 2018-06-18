@@ -46,7 +46,7 @@ public class XephangMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(XephangMenuActivity.this, XephangActivity.class);
-                Layout = 3;
+                Layout = 2;
                 intent.putExtra("Layout",String.valueOf(Layout));
                 startActivity(intent);
             }
@@ -57,7 +57,7 @@ public class XephangMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(XephangMenuActivity.this, XephangActivity.class);
-                Layout = 4;
+                Layout = 3;
                 intent.putExtra("Layout",String.valueOf(Layout));
                 startActivity(intent);
             }
@@ -68,7 +68,7 @@ public class XephangMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(XephangMenuActivity.this, XephangActivity.class);
-                Layout = 5;
+                Layout = 4;
                 intent.putExtra("Layout",String.valueOf(Layout));
                 startActivity(intent);
             }
@@ -79,7 +79,7 @@ public class XephangMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(XephangMenuActivity.this, XephangActivity.class);
-                Layout = 6;
+                Layout = 5;
                 intent.putExtra("Layout",String.valueOf(Layout));
                 startActivity(intent);
             }

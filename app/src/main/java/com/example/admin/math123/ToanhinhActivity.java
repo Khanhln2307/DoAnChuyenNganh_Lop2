@@ -44,6 +44,7 @@ public class ToanhinhActivity extends AppCompatActivity {
         Intent intenttest = getIntent();
         count = intenttest.getIntExtra("count",1);
         point = intenttest.getIntExtra("point",0);
+        Layout = intenttest.getIntExtra("LayoutBaiTap",3);
         istest=intenttest.getBooleanExtra("istest",false);
         imageToanHinh = (ImageView)findViewById(R.id.imageToanHinh);
         question=(TextView)findViewById(R.id.txtQuestionToanHinh);

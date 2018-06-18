@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.admin.math123.core.CustomDialogResult;
 import com.example.admin.math123.core.lonbe;
 
+import java.util.Random;
+
 import static com.example.admin.math123.settingActivity.musicEffectChecked;
 import static com.example.admin.math123.settingActivity.musicfail;
 import static com.example.admin.math123.settingActivity.musicsuccess;
@@ -30,7 +32,8 @@ public class LonbeActivity extends AppCompatActivity {
     Button btnnext;
     TextView countview;
     TextView pointView;
-    int type= (int) (2*Math.random());
+    Random rd=new Random();
+    int type = rd.nextInt((1-0+1)+0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class LonbeActivity extends AppCompatActivity {
         Intent intenttest = getIntent();
         count = intenttest.getIntExtra("count",1);
         point = intenttest.getIntExtra("point",0);
+        Layout = intenttest.getIntExtra("LayoutBaiTap",2);
         istest=intenttest.getBooleanExtra("istest",false);
         signview = (TextView)findViewById(R.id.SignView);
         numbera = (TextView)findViewById(R.id.numbera);
